@@ -1,0 +1,96 @@
+# Experiment 1: Exploring NumPy and Pandas
+
+## Aim
+
+To understand the use of NumPy and Pandas for performing basic data
+manipulation and analysis in Python.
+
+## Algorithm
+
+1.  Import the NumPy library for matrix and numerical operations.
+2.  Define a two-dimensional square matrix `A` and a vector `b`.
+3.  Compute the transpose of matrix `A` to interchange rows and columns.
+4.  Calculate the inverse of matrix `A` using `np.linalg.inv(A)` (ensure
+    `A` is non-singular).
+5.  Solve the linear equation `A × x = b` using `np.linalg.solve(A, b)`.
+6.  Perform eigen decomposition to find eigenvalues and eigenvectors
+    using `np.linalg.eig(A)`.
+7.  Display the results for the matrix, transpose, inverse, solution
+    vector, and eigenvalues.
+8.  End the program.
+
+## Formulas / Theory
+
+-   **Transpose:** `Aᵀ` --- interchange rows and columns.
+-   **Inverse:** `A⁻¹ = adj(A) / |A|`, provided `det(A) ≠ 0`.
+-   **Linear system:** `A × x = b  ⇒  x = A⁻¹b`.
+-   **Eigen decomposition:** `A v = λ v`, where `λ` is an eigenvalue and
+    `v` is an eigenvector.
+
+## Coding
+import numpy as np
+import pandas as pd
+ 
+# Define matrix A and vector b
+A = np.array([[4, 2],
+[1, 3]])
+ 
+b = np.array([6, 5])
+ 
+# Transpose of A
+AT = A.T
+ 
+# Inverse of A
+A_inv = np.linalg.inv(A)
+ 
+# Solve Ax = b
+x = np.linalg.solve(A, b)
+ 
+# Eigenvalues and Eigenvectors
+eigenvalues, eigenvectors = np.linalg.eig(A)
+ 
+# Display Results
+print("Matrix A:")
+print(A)
+ 
+print("\nTranspose of A:")
+print(AT)
+ 
+print("\nInverse of A:")
+print(A_inv)
+ 
+print("\nSolution of Ax = b:")
+print(x)
+ 
+print("\nEigenvalues:")
+print(eigenvalues)
+ 
+print("\nEigenvectors:")
+print(eigenvectors)
+
+
+## Output
+Matrix A:
+[[4 2]
+ [1 3]]
+
+Transpose of A:
+[[4 1]
+ [2 3]]
+
+Inverse of A:
+[[ 0.3 -0.2]
+ [-0.1  0.4]]
+
+Solution of Ax = b:
+[0.8 1.4]
+
+Eigenvalues:
+[5. 2.]
+
+Eigenvectors:
+[[ 0.89442719 -0.70710678]
+ [ 0.4472136   0.70710678]]
+
+## Result
+Thus, the use of NumPy for matrix operations such as transpose, inverse, solving linear equations, and eigenvalue decomposition was successfully implemented and verified using Python. Pandas was imported for data analysis applications and can be integrated with NumPy for advanced data manipulation tasks.
