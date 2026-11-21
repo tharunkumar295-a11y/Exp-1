@@ -28,10 +28,59 @@ manipulation and analysis in Python.
     `v` is an eigenvector.
 
 ## Coding
+# Experiment 1: Exploring NumPy and Pandas
 
+# Import libraries
+import numpy as np
+import pandas as pd
+
+# Define a square matrix A and vector b
+A = np.array([[4, 2],
+              [1, 3]])
+
+b = np.array([10, 8])
+
+# Display Matrix A
+print("Matrix A:")
+print(A)
+
+# Compute transpose
+A_transpose = A.T
+print("\nTranspose of A:")
+print(A_transpose)
+
+# Compute inverse
+A_inverse = np.linalg.inv(A)
+print("\nInverse of A:")
+print(A_inverse)
+
+# Solve linear system Ax = b
+x = np.linalg.solve(A, b)
+print("\nSolution of Ax = b:")
+print(x)
+
+# Eigen decomposition
+eigenvalues, eigenvectors = np.linalg.eig(A)
+
+print("\nEigenvalues:")
+print(eigenvalues)
+
+print("\nEigenvectors:")
+print(eigenvectors)
+
+# Demonstration of Pandas
+df = pd.DataFrame(A, columns=['Column1', 'Column2'])
+
+print("\nPandas DataFrame:")
+print(df)
+
+print("\nDescriptive Statistics:")
+print(df.describe())
 
 ## Output
+<img width="372" height="570" alt="image" src="https://github.com/user-attachments/assets/784873ad-275b-4361-b148-d4cdf66521c6" />
+<img width="348" height="232" alt="image" src="https://github.com/user-attachments/assets/5709ecfa-68a4-4bb6-8062-d0b899af6c46" />
 
 
 ## Result
-
+NumPy was successfully used to perform matrix operations such as transpose, inverse computation, solving a system of linear equations, and eigen decomposition. Pandas was used to create a DataFrame and perform basic data analysis using descriptive statistics. Thus, the use of NumPy and Pandas for data manipulation and numerical computation was successfully explored.
